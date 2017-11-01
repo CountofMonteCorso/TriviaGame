@@ -1,0 +1,33 @@
+body {
+	background-image: url(https://images3.alphacoders.com/273/273289.jpg);
+	background-size: 100%;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+#BattlePic {
+	max-width: 500px;
+}
+
+.img {
+	max-width: 500px;
+}
+
+h1 {
+	text-align: center;
+}
+h2 {
+	text-align: center;
+}
+
+.row {
+	text-align: center;
+	max-width: 400px;
+}
+
+#aria-label {
+	background-color: transparent;
+}
+
+#subbtn {
+	text-align: center;
+}

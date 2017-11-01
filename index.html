@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon Quiz!</title>
+		<link rel="stylesheet" type="text/css" href="assets/reset.css">
+		<link rel="stylesheet" type="text/css" href="assets/style.css">
+		<audio controls autoplay>
+			<source src= "media/PokemonThemeSong.mp3">
+		</audio>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.js"   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+	
+	<div class = "container">
+
+		<div class = "row">
+			<h1> The Pokemon Quiz! </h1>
+			<h2> Finish before time runs out... or else! </h2>
+		</div>
+
+		<div class = "row" id = "RedVSBlue">
+			<img src="media/redvblue.jpg" id = "BattlePic">
+		</div>	
+
+		<div class = "row" id = "Q1">
+			How many Pokemon are there?
+			<span class="input-group-addon"> 151
+        		<input type="radio" aria-label="..." name="Q1">
+        	</span>
+			</input>
+			<span class="input-group-addon"> 251
+        		<input type="radio" aria-label="..." name="Q1">
+        	</span>
+			</input>
+			<span class="input-group-addon"> 721
+        		<input type="radio" aria-label="..." name="Q1">
+        	</span>
+			</input>
+			<span class="input-group-addon"> 802
+        		<input type="radio" aria-label="..." name="Q1">
+        	</span>
+			</input>
+		</div>	
+
+		<div class = "row" id = "Q2">
+			Who was Ash's first Pokemon?
+			<span class="input-group-addon"> Pikachu
+        		<input type="radio" aria-label="..." name="Q2">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Charmander
+        		<input type="radio" aria-label="..." name="Q2">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Squirtle
+        		<input type="radio" aria-label="..." name="Q2">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Bulbasaur
+        		<input type="radio" aria-label="..." name="Q2">
+        	</span>
+			</input>
+		</div>	
+			
+		<div class = "row" id = "Q3">
+			Which of these is not an official Smogon tier?
+			<span class="input-group-addon"> OU
+        		<input type="radio" aria-label="..." name="Q3">
+        	</span>
+			</input>
+			<span class="input-group-addon"> BL
+        		<input type="radio" aria-label="..." name="Q3">
+        	</span>
+			</input>
+			<span class="input-group-addon"> UU
+        		<input type="radio" aria-label="..." name="Q3">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Ubers
+        		<input type="radio" aria-label="..." name="Q3">
+        	</span>
+			</input>
+		</div>	
+
+		<div class = "row" id = "Q4">
+			Who won the official 2016 Pokemon World Tournament in the Master's division?
+			<span class="input-group-addon"> Wolfe Glick
+        		<input type="radio" aria-label="..." name="Q4">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Sejun Park
+        		<input type="radio" aria-label="..." name="Q4">
+        	</span>
+			</input>			
+			<span class="input-group-addon"> Ryota Otsubo
+        		<input type="radio" aria-label="..." name="Q4">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Ray Rizzo
+        		<input type="radio" aria-label="..." name="Q4">
+        	</span>
+			</input>
+		</div>	
+
+		<div class = "row" id = "Q5">
+			Which of these Pokemon is not available for use in Pokken Tournament?
+			<span class="input-group-addon"> Suicune
+        		<input type="radio" aria-label="..." name="Q5">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Medicham
+        		<input type="radio" aria-label="..." name="Q5">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Machamp
+        		<input type="radio" aria-label="..." name="Q5">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Chandelure
+        		<input type="radio" aria-label="..." name="Q5">
+        	</span>
+			</input>
+		</div>	
+
+		<div class = "row" id = "Q6">
+			Who orginally came up with the idea for the GBA draft-style Pokemon league on YouTube?
+			<span class="input-group-addon"> aDrive
+        		<input type="radio" aria-label="..." name="Q6">
+        	</span>
+			</input>
+			<span class="input-group-addon"> M4GNITUDE
+        		<input type="radio" aria-label="..." name="Q6">
+        	</span>
+			</input>
+			<span class="input-group-addon"> ShadyPenguinn
+        		<input type="radio" aria-label="..." name="Q6">
+        	</span>
+			</input>
+			<span class="input-group-addon">PokeaimMD
+        		<input type="radio" aria-label="..." name="Q6">
+        	</span>
+			</input>
+		</div>	
+
+		<div class = "row" id = "Q7">
+			As of today's date, October 31, 2017, which of these coaches has never been in the GBA?
+			<span class="input-group-addon"> Mega Mogwai
+        		<input type="radio" aria-label="..." name="Q7">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Kooper
+        		<input type="radio" aria-label="..." name="Q7">
+        	</span>
+			</input>
+			<span class="input-group-addon"> CrimsonCBad
+        		<input type="radio" aria-label="..." name="Q7">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Thunderblunder777
+        		<input type="radio" aria-label="..." name="Q7">
+        	</span>
+			</input>
+		</div>	
+
+		<div class = "row" id = "Q8">
+			In what city was the official 2017 Pokemon World Championships held?
+			<span class="input-group-addon"> Los Angeles
+        		<input type="radio" aria-label="..." name="Q8">
+        	</span>
+			</input>
+			<span class="input-group-addon"> San Francisco
+        		<input type="radio" aria-label="..." name="Q8">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Anaheim
+        		<input type="radio" aria-label="..." name="Q8">
+        	</span>
+			</input>
+			<span class="input-group-addon"> San Diego
+        		<input type="radio" aria-label="..." name="Q8">
+        	</span>
+			</input>
+		</div>	
+
+		<div class = "row" id = "Q9">
+			Who was not an original host of the objectively greatest Pokemon podcast out there, KantoCast?
+			<span class="input-group-addon"> Red
+        		<input type="radio" aria-label="..." name="Q9">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Green
+        		<input type="radio" aria-label="..." name="Q9">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Blue
+        		<input type="radio" aria-label="..." name="Q9">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Yellow
+        		<input type="radio" aria-label="..." name="Q9">
+        	</span>
+			</input>
+		</div>	
+
+		<div class = "row" id = "Q10">
+			As of today's date, October 31, 2017, only one Pokemon has been OU every single generation--what Pokemon is that?
+			<span class="input-group-addon"> Alakazam
+        		<input type="radio" aria-label="..." name="Q10">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Zapdos
+        		<input type="radio" aria-label="..." name="Q10">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Gengar
+        		<input type="radio" aria-label="..." name="Q10">
+        	</span>
+			</input>
+			<span class="input-group-addon"> Starmie
+        		<input type="radio" aria-label="..." name="Q10">
+        	</span>
+			</input>
+		</div>	
+		
+		<div class="btn-group" role="group">
+   			 <button type="button" class="btn btn-default" id="subbtn">Submit</button>
+  		</div>
+
+	</div>
+		<script type="text/javascript" src="javascript/app.js"></script>
+</body>
+
+</html>
