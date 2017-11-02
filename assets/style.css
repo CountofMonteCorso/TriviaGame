@@ -31,3 +31,7 @@ h2 {
 #subbtn {
 	text-align: center;
 }
+
+.results {
+display: none;
+}

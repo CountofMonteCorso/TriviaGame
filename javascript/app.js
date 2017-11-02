@@ -1,138 +1,104 @@
-setTimeout(rickRoll, 321000);
+setTimeout(rickRoll, 202000);
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var finalCountdown = (60 * 3) + 21,
+        display = document.querySelector('#time');
+    startTimer(finalCountdown, display);
+};
 
 function rickRoll(){
-console.log("help");
 window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
 };
 
-
+var totalCorrect = 0
 
 var myQuestions = [
 	{
 		question: "How many Pokemon are there?",
-
-		answers: {
-			a:'151',
-			b:'251',
-			c:'721',
-			d:'802'
-		},
-		correctAnswer: 'd'
+		correctAnswer: '802'
 	},
 
 	{
 		question: "Who was Ash's first Pokemon?",
-	
-		answers: {
-			a:'Pikachu',
-			b:'Charmander',
-			c:'Squirtle',
-			d:'Bulbasaur',
-		},
-		correctAnswer: 'a'
+		correctAnswer: 'Pikachu'
 	},
 
 	{
 			question: "Which of these is not an official Smogon tier?",
-	
-		answers: {
-			a:'OU',
-			b:'BL',
-			c:'UU',
-			d:'Ubers',
-		},
-		correctAnswer: 'b'
+		correctAnswer: 'BL'
 	},
 
 	{
 			question: "Who won the official 2016 Pokemon World Tournament in the Master's division?",
-	
-		answers: {
-			a:'Wolfe Glick',
-			b:'Sejun Park',
-			c:'Ryota Otsubo',
-			d:'Ray Rizzo',
-		},
-		correctAnswer: 'a'
+		correctAnswer: 'Wolfe Glick'
 	},
 
 	{
 			question: "Which of these Pokemon is not available for use in Pokken Tournament?",
-	
-		answers: {
-			a:'Suicune',
-			b:'Medicham',
-			c:'Machamp',
-			d:'Chandelure',
-		},
-		correctAnswer: 'b'
+		correctAnswer: 'Medicham'
 	},
 
 	{
 			question: "Who orginally came up with the idea for the GBA draft-style Pokemon league on YouTube?",
-	
-		answers: {
-			a:'aDrive',
-			b:'M4GNITUDE',
-			c:'ShadyPenguinn',
-			d:'PokeaimMD',
-		},
-		correctAnswer: 'b'
+		correctAnswer: 'M4GNITUDE'
 	},
 
 	{
 			question: "As of today's date, October 31, 2017, which of these coaches has never been in the GBA?",
-	
-		answers: {
-			a:'Mega Mogwai',
-			b:'Kooper',
-			c:'CrimsonCBad',
-			d:'Thunderblunder777',
-		},
-		correctAnswer: 'd'
+		correctAnswer: 'Thunderblunder777'
 	},
 
 	{
 			question: "In what city was the official 2017 Pokemon World Championships held?",
-	
-		answers: {
-			a:'Los Angeles',
-			b:'San Francisco',
-			c:'Anaheim',
-			d:'San Diego',
-		},
-		correctAnswer: 'c'
+		correctAnswer: 'Anaheim'
 	},
 
 	{
 			question: "Who was not an original host of the objectively greatest Pokemon podcast out there, KantoCast?",
-	
-		answers: {
-			a:'Red',
-			b:'Green',
-			c:'Blue',
-			d:'Yellow',
-		},
-		correctAnswer: 'b'
+		correctAnswer: 'Green'
 	},
 
 	{
 			question: "As of today's date, October 31, 2017, only one Pokemon has been OU every single generation--what Pokemon is that?",
-	
-		answers: {
-			a:'Alakazam',
-			b:'Zapdos',
-			c:'Gengar',
-			d:'Starmie',
-		},
-		correctAnswer: 'c'
+		correctAnswer: 'Gengar'
 	}
 ]
 
 //function(e) because 
 $('form').on('submit', function(e) {
-	 var data = $(this).serialize(); 
-	 e.preventDefault();
-	 console.log("data".data)
+	var userData = $(this).serializeArray(); 
+	e.preventDefault();
+	console.log("data",userData);
+	console.log(userData[1].value);
+
+	for (var i = 0; i < myQuestions.length; i++){
+		 if (userData[i].value === myQuestions[i].correctAnswer){
+	 	totalCorrect++
+		 }
+	}	 
+	console.log(totalCorrect);
+
+	$('.results').html("Your score is " + totalCorrect + "!")
+	$('.results').show();
+	$('form').hide();
+	clearTimeout(rickRoll);
 });
+
