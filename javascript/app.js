@@ -6,7 +6,7 @@ window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
 };
 
-var userGuess = .on(click)
+
 
 var myQuestions = [
 	{
@@ -32,6 +32,8 @@ var myQuestions = [
 		},
 		correctAnswer: 'a'
 	},
+
+	{
 			question: "Which of these is not an official Smogon tier?",
 	
 		answers: {
@@ -41,7 +43,9 @@ var myQuestions = [
 			d:'Ubers',
 		},
 		correctAnswer: 'b'
-	}
+	},
+
+	{
 			question: "Who won the official 2016 Pokemon World Tournament in the Master's division?",
 	
 		answers: {
@@ -51,7 +55,9 @@ var myQuestions = [
 			d:'Ray Rizzo',
 		},
 		correctAnswer: 'a'
-	}
+	},
+
+	{
 			question: "Which of these Pokemon is not available for use in Pokken Tournament?",
 	
 		answers: {
@@ -61,7 +67,9 @@ var myQuestions = [
 			d:'Chandelure',
 		},
 		correctAnswer: 'b'
-	}
+	},
+
+	{
 			question: "Who orginally came up with the idea for the GBA draft-style Pokemon league on YouTube?",
 	
 		answers: {
@@ -71,7 +79,9 @@ var myQuestions = [
 			d:'PokeaimMD',
 		},
 		correctAnswer: 'b'
-	}
+	},
+
+	{
 			question: "As of today's date, October 31, 2017, which of these coaches has never been in the GBA?",
 	
 		answers: {
@@ -81,7 +91,9 @@ var myQuestions = [
 			d:'Thunderblunder777',
 		},
 		correctAnswer: 'd'
-	}
+	},
+
+	{
 			question: "In what city was the official 2017 Pokemon World Championships held?",
 	
 		answers: {
@@ -91,7 +103,9 @@ var myQuestions = [
 			d:'San Diego',
 		},
 		correctAnswer: 'c'
-	}
+	},
+
+	{
 			question: "Who was not an original host of the objectively greatest Pokemon podcast out there, KantoCast?",
 	
 		answers: {
@@ -101,7 +115,9 @@ var myQuestions = [
 			d:'Yellow',
 		},
 		correctAnswer: 'b'
-	}
+	},
+
+	{
 			question: "As of today's date, October 31, 2017, only one Pokemon has been OU every single generation--what Pokemon is that?",
 	
 		answers: {
@@ -114,7 +130,9 @@ var myQuestions = [
 	}
 ]
 
-$('form').on('submit', function() {
+//function(e) because 
+$('form').on('submit', function(e) {
 	 var data = $(this).serialize(); 
+	 e.preventDefault();
 	 console.log("data".data)
 });
