@@ -1,7 +1,7 @@
 body {
 	background-image: url(https://images3.alphacoders.com/273/273289.jpg);
 	background-size: 100%;
-	padding-left: 15%;
+	padding-left: 30%;
 	padding-right: 15%;
 }
 #BattlePic {
@@ -34,4 +34,15 @@ h2 {
 
 .results {
 display: none;
+font-size: 48pt;
+text-align: center;
+}
+
+#time {
+	text-align: center;
+	font-size: 48pt;
+	background: black;
+	color: white;
+	max-width: 500px;
+	min-width: 500px;
 }

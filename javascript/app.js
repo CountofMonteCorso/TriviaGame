@@ -96,7 +96,7 @@ $('form').on('submit', function(e) {
 	}	 
 	console.log(totalCorrect);
 
-	$('.results').html("Your score is " + totalCorrect + "!")
+	$('.results').html("You got " + totalCorrect + " questions correct!")
 	$('.results').show();
 	$('form').hide();
 	clearTimeout(rickRoll);
